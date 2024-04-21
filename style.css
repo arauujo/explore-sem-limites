@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-base-white: #FFFFFF;
+  --color-base-pink-1: #F9F4FB;
+  --color-base-pink-2: #B52184;
+  --color-base-purple: #312D64;
+  --gradient-base-purple: linear-gradient(90deg, rgba(52,49,147,1) 0%, rgba(48,44,99,1) 100%)
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--color-base-pink);
+}
+
+html, body, input, textarea, button {
+  font-family: 'Mulish', sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  position: relative;
+  min-height: 100vh;
+}
+
+h1, h2, h3, figcaption {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--color-base-pink-2);
+}
+
+p, input, label, textarea, ::placeholder {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-base-purple);
+  line-height: 140%;
+}
+
+.page1 p, footer p {
+  font-size: 2.0rem;
+  line-height: 1.4rem;
+}
+
+.page1 h1 {
+  margin-top: 1.7rem;
+}
+
+.page1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.astronaut {
+  width: max(364px, 5vw);
+}
+
+.retangle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 3.5rem;
+}
+
+.arrow-down {
+  position: absolute;
+}
+
+.page2 {
+  background: var(--gradient-base-purple);
+}
+
+.cards {
+  padding: 5.3rem 3.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+figure {
+  padding: 2.6rem;
+  background-color: white;
+  width: 35.2rem;
+  border-radius: 2.0rem;
+}
+
+figcaption {
+  margin-top: 3rem;
+}
+
+figure p {
+  margin-top: 2rem;
+  width: 26.6rem;
+}
+
+.page3 {
+  padding: 7rem 4rem;
+}
+
+form {
+  margin-top: 4.3rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 2.4rem;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper img {
+  position: absolute;
+  left: 1.4rem;
+}
+
+.input-wrapper input, textarea {
+  width: 100%;
+  padding: 1.6rem 1.6rem 1.6rem 5rem;
+  border-radius: 1.6rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-base-purple);
+  background: var(--color-base-pink);
+}
+
+.input-wrapper textarea, button {
+  padding: 1.6rem;
+}
+
+input:hover, textarea:hover {
+  opacity: 80%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  width: 15.1rem;
+  border: none;
+  border-radius: 1.6rem;
+  background: var(--gradient-base-purple);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-base-white);
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 3.2rem 1.6rem;
+  background: var(--gradient-base-purple);
+}
+
+footer p {
+  color: var(--color-base-white);
+  font-weight: 500;
+}
+
+
+/* Media Queries */
+@media (min-width: 1120px) {
+
+  .page1 {
+    height: 100vh;
+    padding: 0 3rem 10.4rem 10.4rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .page1 h1 {
+    font-size: 5.8rem;
+  }
+
+  .page1 p {
+    margin-top: 0.8rem;
+    font-size: 3.2rem;
+  }
+
+  .astronaut {
+    align-self: flex-start;
+    width: auto;
+    height: 100%;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    align-items: flex-start;
+  }
+
+  .retangle-wrapper {
+    margin-top: 18rem;
+  }
+
+  .page3 {
+    background: url(./assets/stars.svg) no-repeat right;
+  }
+
+  .cards {
+    flex-direction: row;
+  }
+
+  figure {
+    width: 36.6rem;
+    height: 44.8rem;
+  }
+
+  figcaption {
+    font-size: 3.5rem;
+  }
+
+  figure p {
+    font-size: 1.9rem;
+    width: 32rem;
+  }  
+
+  .page3 h3 {
+    font-size: 4.2rem;
+  }
+
+  .input-wrapper input, textarea {
+    width: 50%;
+  }
+    
+}
